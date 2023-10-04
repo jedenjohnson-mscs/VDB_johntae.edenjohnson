@@ -1,0 +1,5 @@
+Customers - (ID, first_name, Last_Name phone_number, address, city, state, zip_code, appointment_date, service_provided)
+Employees - (ID, first_name, last_name, phone_number, hire_date)
+Warranty Provider - (ID, company_name)
+Warranty Claims - (Claim_Number, Custommer_ID, Claim_date,)
+Receipts - (Customer_ID, WO_Number, payment_date, Amount_paid, Employee_ID)

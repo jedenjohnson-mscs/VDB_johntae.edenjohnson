@@ -1,0 +1,5 @@
+as a service manager i want to review customer history for services provided.
+as a service manager i want to keep organized employee records to find information quick when needed.
+as a service manager i want to keep track of warranty providers to have up-to-date information
+as a service manager i want to keep track of warranty claims for customers.
+as a service manager i want to review receipts for payment history. 
