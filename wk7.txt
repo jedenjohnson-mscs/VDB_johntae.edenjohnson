@@ -1,0 +1,44 @@
+1.  $780
+	SELECT MAX(Rent) AS Expr1
+	FROM  Apartment
+
+
+2. $2200
+	SELECT Building_ID, SUM(Sq_Ft) AS Expr1
+	FROM  Apartment
+	GROUP BY Building_ID
+	HAVING (Building_ID = 2)
+
+
+3. Sally Doe
+	SELECT Person.First_Name, Person.Last_Name, Person.Person_ID, 	MAX(Apartment.Rent) AS Expr1, Apartment.Tenant_ID
+	FROM  Apartment INNER JOIN
+      	 	Person ON Apartment.Tenant_ID = Person.Person_ID
+	GROUP BY Person.First_Name, Person.Last_Name, Person.Person_ID, 			Apartment.Tenant_ID
+	ORDER BY Expr1 DESC
+
+
+4.  2
+	SELECT AVG(Beds) AS Expr1
+	FROM  Apartment
+
+5.  4
+	SELECT COUNT(Building_ID) AS Expr1
+	FROM  Building
+
+
+6.  4
+	SELECT Person.Person_ID, Apartment.Manager_ID, COUNT(Apartment.Apt_Number) 	AS Expr1
+	FROM  Apartment INNER JOIN
+      	 Person ON Apartment.Manager_ID = Person.Person_ID
+	GROUP BY Person.Person_ID, Apartment.Manager_ID
+	HAVING (Apartment.Manager_ID = 1)
+
+
+7.  $111.00
+	SELECT Invoice.InvoiceID, MIN(Receipt.ReceiptAmount) AS min
+	FROM  Invoice INNER JOIN
+      	 Receipt ON Invoice.InvoiceID = Receipt.Invoice_ID
+	GROUP BY Invoice.InvoiceID
+	ORDER BY min
+
