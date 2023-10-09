@@ -3,7 +3,7 @@
 	FROM  Apartment
 
 
-2. $2200
+2. 2200
 	SELECT Building_ID, SUM(Sq_Ft) AS Expr1
 	FROM  Apartment
 	GROUP BY Building_ID
